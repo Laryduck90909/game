@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Cairo', 'Tajawal', 'Noto Sans Arabic', 'Geeza Pro', 'Fredoka', 'Nunito', ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulseUrgent {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes shimmerGold {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 2.6s ease-in-out infinite;
+}
+
+.animate-pulse-urgent {
+  animation: pulseUrgent 0.65s ease-in-out infinite;
+}
+
+.wood-panel {
+  background: linear-gradient(180deg, #8b5228 0%, #6d3d1b 100%);
+  border: 3px solid #47240d;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 219, 172, 0.35),
+    inset 0 -3px 0 rgba(38, 17, 4, 0.5),
+    0 6px 16px rgba(20, 35, 10, 0.38);
+}
+
+.parchment-panel {
+  background: linear-gradient(180deg, #fff9ea 0%, #f6e7c4 100%);
+  border: 3px solid #7c4922;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.85),
+    0 12px 32px rgba(20, 35, 10, 0.45);
+}
+
+.btn-farm-green {
+  background: linear-gradient(180deg, #6bd03b 0%, #449e21 100%);
+  border: 3px solid #286310;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.45),
+    0 4px 0 #286310,
+    0 6px 12px rgba(0, 0, 0, 0.28);
+  transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.12s ease;
+}
+
+.btn-farm-green:hover {
+  filter: brightness(1.06);
+}
+
+.btn-farm-green:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 1px 0 #286310,
+    0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.btn-farm-amber {
+  background: linear-gradient(180deg, #ffca3a 0%, #e59400 100%);
+  border: 3px solid #8c5200;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    0 4px 0 #8c5200,
+    0 6px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.12s ease;
+}
+
+.btn-farm-amber:hover {
+  filter: brightness(1.05);
+}
+
+.btn-farm-amber:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    0 1px 0 #8c5200,
+    0 2px 6px rgba(0, 0, 0, 0.22);
+}
